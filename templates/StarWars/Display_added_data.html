@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies Added</title>
+</head>
+<body>
+<h2>Saved Movie Data</h2>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Episode_ID</th>
+        <th>Director</th>
+        <th>Producer</th>
+    </tr>
+    {% for movie in movies_added_data %}
+    <tr>
+        <td><input type="text" name="title" value="{{movie.title}}" readonly></td>
+        <td><input type="text" name="episode_id" value="{{movie.episode_id}}" readonly></td>
+        <td><input type="text" name="director" value="{{movie.director}}" readonly></td>
+        <td><input type="text" name="producer" value="{{movie.producer}}" readonly></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br><br>
+<h2>Saved Planet Data</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Rotation Period</th>
+        <th>Orbital Period</th>
+
+    </tr>
+    {% for p in planet_added_data %}
+    <tr>
+        <td><input type="text" name="name" value="{{p.name}}" readonly></td>
+        <td><input type="text" name="rotation_period" value="{{p.rotation_period}}" readonly></td>
+        <td><input type="text" name="orbital_period" value="{{p.orbital_period}}" readonly></td>
+
+
+    </tr>
+    {% endfor %}
+</table>
+</br></br></br></br></br></br></br>
+<a href="/StarWars/" style="float:left">Main Page</a><br/>
+</body>
+</html>

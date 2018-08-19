@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SearchPlanet</title>
+
+</head>
+<body>
+
+<form action="/StarWars/Display_Planet" method="GET">
+    <select name="Titles">
+        {% for title in titles %}
+        <option value='{{title}}'>{{title}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Search Planet">
+</form>
+</br></br></br></br></br></br></br>
+<a href="/StarWars/" style="float:left">Main Page</a><br/>
+</body>
+</html>
