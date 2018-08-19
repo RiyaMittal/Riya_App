@@ -15,7 +15,7 @@
 <h1>STAR WARS</h1>
 <form action="/StarWars/add_data/" method="POST">
     {% csrf_token %}
-    <input type="text" name="dataurl" value="{{dataurl}}" readonly>
+    <input type="text" name="dataurl" value="{{dataurl}}" readonly hidden>
     <table>
         <tr>
             <th>Title</th>
@@ -41,7 +41,7 @@
 <h2> Planet Details for {{title}}</h2>
 <form action="/StarWars/add_Planets_data/" method="POST">
     {% csrf_token %}
-    <input type="text" name="planet_list" value="{{planet_list}}" readonly>
+    <input type="text" name="planet_list" value="{{planet_list}}" readonly hidden>
 
     <table>
         <tr>
